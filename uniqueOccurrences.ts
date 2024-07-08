@@ -2,6 +2,8 @@
  * @param {number[]} arr
  * @return {boolean}
  */
+
+// can improve using new Map and new Set
 var uniqueOccurrences = function (arr: number[]) {
   const mappingScore: Record<number, number> = {};
   for (let idx = 0; idx < arr.length; idx++) {
@@ -17,4 +19,9 @@ var uniqueOccurrences = function (arr: number[]) {
   return values.length === [...new Set(values)].length;
 };
 
-console.log(uniqueOccurrences([1, 2, 2, 1, 1, 3]));
+// console.log(uniqueOccurrences([1, 2, 2, 1, 1, 3]));
+var isEmpty = function (obj: Record<any, any>) {
+  const keys = Object.keys(obj);
+  return !Boolean(keys.length);
+};
+console.log(isEmpty({ a: 1 }));
