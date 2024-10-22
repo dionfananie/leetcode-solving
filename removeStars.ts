@@ -12,4 +12,4 @@ var removeStars = function (s: string) {
   return newArr.join("");
 };
 
-// console.log(removeStars("leet*cod*"))
+console.log(removeStars("leet*cod*"));
